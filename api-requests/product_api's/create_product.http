@@ -1,0 +1,13 @@
+### GET request to example server
+POST http://localhost:8050/api/v1/products
+Content-Type: application/json
+
+{
+  "name": "Ergonomic Keyboard 2",
+  "description": "Mechanical keyboard with wrist rest with backlight",
+  "price": 209.99,
+  "available_quantity": 10.0,
+  "categoryId": 1,
+  "categoryName": "Keyboards",
+  "categoryDescription": "Computer Keyboards"
+}

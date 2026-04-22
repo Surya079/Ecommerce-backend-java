@@ -1,0 +1,37 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://Surya:Surya@localhost:27017/notification?authSource=admin
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    consumer:
+      group-id: notificationGroup
+      auto-offset-reset: latest
+
+      key-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+
+      properties:
+        spring.deserializer.key.delegate.class: org.apache.kafka.common.serialization.StringDeserializer
+        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+
+        spring.json.trusted.packages: "*"
+        spring.json.use.type.headers: false
+
+  mail:
+    host: localhost
+    port: 1025
+    username: surya
+    password: surya
+    properties:
+      mail:
+        smtp:
+          trust: "*"
+        auth: true
+        starttls:
+          enabled: true
+        connectiontimeout: 5000
+        timeout: 3000
+        writetimeout: 5000

@@ -1,0 +1,6 @@
+spring:
+  mongodb:
+    uri: mongodb://Surya:Surya@localhost:27017/customer?authSource=admin
+
+server:
+  port: 8090

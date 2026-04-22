@@ -1,0 +1,11 @@
+### GET request to example server
+POST http://localhost:8050/api/v1/products/purchase
+Content-Type: application/json
+
+[
+  {
+    "productId": 151,
+    "quantity": 1
+  }
+
+]

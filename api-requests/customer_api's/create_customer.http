@@ -1,0 +1,17 @@
+
+POST http://localhost:8090/api/v1/customers
+Content-Type: application/json
+
+
+{
+    "firstName":"Surya",
+    "lastName":"V",
+    "email":"surya@mail.com",
+    "address": {
+      "street": "tvk street",
+      "houseNumber": "247",
+      "zipCode": "622301"
+    }
+}
+
+

@@ -1,0 +1,10 @@
+spring:
+  jackson:
+    time-zone: Asia/Kolkata
+  config:
+    import: optional:configserver:http://localhost:8888
+  application:
+    name: product-service
+logging:
+  level:
+    org.flywaydb: DEBUG

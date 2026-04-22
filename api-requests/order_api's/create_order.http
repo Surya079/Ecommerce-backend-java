@@ -1,0 +1,16 @@
+
+POST http://localhost:8222/api/v1/orders
+Content-Type: application/json
+
+{
+  "reference": "Ref no 1",
+  "amount": 99.9,
+  "paymentMethod": "G_PAY",
+  "customerId": "69e7a4b56084d5693830c068",
+  "products": [
+    {
+      "productId": 1201,
+      "quantity": 1
+    }
+  ]
+}
