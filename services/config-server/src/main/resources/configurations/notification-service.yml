@@ -1,10 +1,10 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://Surya:Surya@localhost:27017/notification?authSource=admin
+      uri: mongodb://Surya:Surya@ms_mongo_db:27017/notification?authSource=admin
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ms-kafka:9092
 
     consumer:
       group-id: notificationGroup
@@ -19,9 +19,14 @@ spring:
 
         spring.json.trusted.packages: "*"
         spring.json.use.type.headers: false
+eureka:
+  instance:
+    hostname: notification-service
+server:
+  port: 8020
 
   mail:
-    host: localhost
+    host: ms_email_dev
     port: 1025
     username: surya
     password: surya

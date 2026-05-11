@@ -3,7 +3,7 @@ spring:
     name: notification-service
 
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:http://config-service:8888
 
   mongodb:
-    uri: mongodb://Surya:Surya@localhost:27017/notification?authSource=admin
+    uri: mongodb://Surya:Surya@ms_mongo_db:27017/notification?authSource=admin

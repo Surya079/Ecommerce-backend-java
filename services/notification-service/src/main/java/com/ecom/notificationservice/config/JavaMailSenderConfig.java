@@ -13,7 +13,7 @@ public class JavaMailSenderConfig {
     @Bean
     public JavaMailSender javaMailSender(){
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-        mailSender.setHost("localhost");
+        mailSender.setHost("ms_mail_dev");
         mailSender.setPort(1025);
         mailSender.setUsername("surya");
         mailSender.setPassword("surya");

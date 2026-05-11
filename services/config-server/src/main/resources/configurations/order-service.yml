@@ -6,7 +6,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5433/order
+    url: jdbc:postgresql://ms_pg_sql:5432/order
     username: postgres
     password: postgres
 
@@ -16,7 +16,7 @@ spring:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ms-kafka:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
@@ -26,6 +26,10 @@ spring:
         spring.json.type.mapping: orderConfirmation:com.ecom.orderservice.kafka.dto.OrderConfirmationDto
 application:
   config:
-    customer-url: http://localhost:8222/api/v1/customers
-    product-url: http://localhost:8222/api/v1/products
-    payment-url: http://localhost:8222/api/v1/payments
+    customer-url: http://customer-service:8222/api/v1/customers
+    product-url: http://product-service:8222/api/v1/products
+    payment-url: http://payment-service:8222/api/v1/payments
+
+eureka:
+  instance:
+    hostname: order-service

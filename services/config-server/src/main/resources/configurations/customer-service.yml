@@ -1,6 +1,9 @@
 spring:
   mongodb:
-    uri: mongodb://Surya:Surya@localhost:27017/customer?authSource=admin
+    uri: mongodb://Surya:Surya@ms_mongo_db:27017/customer?authSource=admin
+eureka:
+  instance:
+    hostname: customer-service
 
 server:
   port: 8090
