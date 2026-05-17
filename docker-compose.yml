@@ -129,8 +129,6 @@ services:
 
   config-server:
     container_name: config-server
-    build:
-      context: ./services/config-server
     ports:
       - "8888:8888"
     networks:
@@ -139,8 +137,6 @@ services:
 
   discovery-server:
     container_name: discovery-server
-    build:
-      context: ./services/discovery-server
     ports:
       - "8761:8761"
     depends_on:
@@ -151,8 +147,6 @@ services:
 
   product-service:
     container_name: product-service
-    build:
-      context: ./services/product-service
     ports:
       - "8050:8050"
     depends_on:
@@ -165,8 +159,6 @@ services:
 
   customer-service:
     container_name: customer-service
-    build:
-      context: ./services/customer-service
     ports:
       - "8090:8090"
     depends_on:
@@ -179,8 +171,6 @@ services:
 
   order-service:
     container_name: order-service
-    build:
-      context: ./services/order-service
     ports:
       - "8070:8070"
     depends_on:
@@ -194,8 +184,6 @@ services:
 
   payment-service:
     container_name: payment-service
-    build:
-      context: ./services/payment-service
     ports:
       - "8060:8060"
     depends_on:
@@ -209,8 +197,6 @@ services:
 
   notification-service:
     container_name: notification-service
-    build:
-      context: ./services/notification-service
     ports:
       - "8040:8040"
     depends_on:
@@ -225,8 +211,6 @@ services:
 
   gateway-service:
     container_name: gateway-service
-    build:
-      context: ./services/gateway-service
     ports:
       - "8080:8080"
     depends_on:
