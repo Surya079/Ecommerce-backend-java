@@ -1,12 +1,12 @@
 # Multi-stage build for smaller image size
-FROM eclipse-temurin:21 AS builder
+FROM eclipse-temurin:17 AS builder
 
 WORKDIR /app
 COPY . .
 RUN ./mvnw clean package -DskipTests
 
 # Runtime stage
-FROM eclipse-temurin:21
+FROM eclipse-temurin:17
 
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
