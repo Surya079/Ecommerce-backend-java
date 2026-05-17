@@ -1,5 +1,5 @@
 # Multi-stage build for smaller image size
-FROM eclipse-temurin:21-jre AS builder
+FROM eclipse-temurin:21-jdk AS builder
 
 WORKDIR /app
 COPY . .

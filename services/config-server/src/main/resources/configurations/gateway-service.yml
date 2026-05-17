@@ -3,8 +3,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak-ms:8080/realms/micro-services
-
+          issuer-uri: "http://localhost:9098/realms/micro-services"
+          jwk-set-uri: "http://host.docker.internal:9098/realms/micro-services/protocol/openid-connect/certs"
   cloud:
     gateway:
       discovery:
@@ -54,3 +54,9 @@ management:
       exposure:
         include: "*"
 
+logging:
+  level:
+    org.springframework.security: TRACE
+    org.springframework.security.oauth2: TRACE
+    org.springframework.web: DEBUG
+    reactor.netty.http.client: DEBUG

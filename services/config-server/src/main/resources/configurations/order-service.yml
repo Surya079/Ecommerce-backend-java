@@ -33,3 +33,6 @@ application:
 eureka:
   instance:
     hostname: order-service
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka/

@@ -121,6 +121,9 @@ services:
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HOSTNAME: localhost
+      KC_HTTP_ENABLED: true
+      KC_HOSTNAME_STRICT: false
     networks:
       - microservices-net
     command:
@@ -131,8 +134,10 @@ services:
     
 
 networks:
+
   microservices-net:
-    driver: bridge
+    external: true
+
 
 volumes:
   postgres:

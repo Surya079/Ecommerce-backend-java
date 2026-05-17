@@ -23,3 +23,6 @@ spring:
 eureka:
   instance:
     hostname: product-service
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka/
