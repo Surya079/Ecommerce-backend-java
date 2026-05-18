@@ -1,5 +1,5 @@
 # Multi-stage build for smaller image size
-FROM eclipse-temurin:17 AS builder
+FROM eclipse-temurin:17-jre-alpine AS builder
 
 WORKDIR /app
 COPY . .
